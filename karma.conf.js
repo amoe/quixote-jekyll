@@ -18,6 +18,7 @@ module.exports = function(config) {
         // list of files / patterns to load in the browser
         files: [
             'test.js',
+            'vendor/*.js'
         ],
 
 
@@ -29,6 +30,7 @@ module.exports = function(config) {
         // We need to run commonjs preprocessor on every test file.
   	preprocessors: {
 	    'test.js': ['commonjs'],
+            'vendor/*.js': ['commonjs']
         },
 
         // test results reporter to use

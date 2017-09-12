@@ -1,10 +1,10 @@
 module.exports = function(config) {
     config.set({
         // Needed by quixote
-        urlRoot: '/karma/',
-        proxies: {
-            '/': 'http://192.168.122.43:4000/'    // jekyll server
-        },
+        // urlRoot: '/karma/',
+        // proxies: {
+        //     '/': 'http://192.168.122.43:4000/'    // jekyll server
+        // },
 
         // base path that will be used to resolve all patterns (eg. files, exclude)
         basePath: '',
@@ -12,13 +12,12 @@ module.exports = function(config) {
 
         // frameworks to use
         // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-        frameworks: ['mocha'],
+        frameworks: ['mocha', 'commonjs'],
 
 
         // list of files / patterns to load in the browser
         files: [
             'test.js',
-            'test.js'
         ],
 
 
@@ -27,11 +26,10 @@ module.exports = function(config) {
         ],
 
 
-        // preprocess matching files before serving them to the browser
-        // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-        preprocessors: {
+        // We need to run commonjs preprocessor on every test file.
+  	preprocessors: {
+	    'test.js': ['commonjs'],
         },
-
 
         // test results reporter to use
         // possible values: 'dots', 'progress'

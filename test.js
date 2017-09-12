@@ -24,19 +24,16 @@
         
         beforeEach(function(done) {
             frame.reload(done);
-            
-            body = frame.get("body");
         });
 
         beforeEach(function() {
-            // logo = frame.get("#logo");
-            // navbar = frame.get("#navbar");
+            body = frame.get(".page-content");
         });
 
         
         it("has a color scheme", function() {
             assert.equal(2, 2);
-//            assert.equal(body.getRawStyle("color"), "#111", "color check");
+            assert.equal(body.getRawStyle("color"), "rgb(17, 17, 17)", "color check");
         });
     });
 }())

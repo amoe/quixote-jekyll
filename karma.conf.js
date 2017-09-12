@@ -1,10 +1,10 @@
 module.exports = function(config) {
     config.set({
         // Needed by quixote
-        // urlRoot: '/karma/',
-        // proxies: {
-        //     '/': 'http://192.168.122.43:4000/'    // jekyll server
-        // },
+        urlRoot: '/karma/',
+        proxies: {
+            '/': 'http://192.168.122.43:4000/'    // jekyll server
+        },
 
         // base path that will be used to resolve all patterns (eg. files, exclude)
         basePath: '',
@@ -12,7 +12,7 @@ module.exports = function(config) {
 
         // frameworks to use
         // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-        frameworks: ['mocha', 'commonjs'],
+        frameworks: ['mocha', 'chai', 'commonjs'],
 
 
         // list of files / patterns to load in the browser

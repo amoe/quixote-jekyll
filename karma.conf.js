@@ -9,16 +9,14 @@ module.exports = function(config) {
         // base path that will be used to resolve all patterns (eg. files, exclude)
         basePath: '',
 
-
         // frameworks to use
         // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-        frameworks: ['mocha', 'chai', 'commonjs'],
+        frameworks: ['mocha', 'chai', 'quixote'],
 
 
         // list of files / patterns to load in the browser
         files: [
-            'test.js',
-            'vendor/*.js'
+            'test.js'
         ],
 
 
@@ -26,11 +24,7 @@ module.exports = function(config) {
         exclude: [
         ],
 
-
-        // We need to run commonjs preprocessor on every test file.
   	preprocessors: {
-	    'test.js': ['commonjs'],
-            'vendor/*.js': ['commonjs']
         },
 
         // test results reporter to use

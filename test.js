@@ -1,8 +1,6 @@
 (function() {
     "use strict";
 
-    var quixote = require("./vendor/quixote.js");
-
     describe("Home page", function() {
 
         var BACKGROUND_BLUE = "rgb(65, 169, 204)";
